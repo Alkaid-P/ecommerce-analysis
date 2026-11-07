@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+
+# 将当前目录添加到系统路径，解决云端部署找不到 src 模块的问题
+sys.path.append(str(Path(__file__).parent.resolve()))
 # app.py
 import importlib.util
 import sys
